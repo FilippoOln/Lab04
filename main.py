@@ -19,15 +19,16 @@ def main():
 
         if scelta == "1":
             nuovo_nome = input("Inserisci il nuovo nome del centro fieristico: ")
-            # TODO: Aggiorna il nome del centro fieristico
+            lingotto.nome = nuovo_nome
+            print(f"Nuovo nome del centro fieristico: {lingotto.nome}")
 
         elif scelta == "2":
             file_path = "dati_lingotto.csv"
             try:
                 lingotto.carica_file_dati(file_path)
                 print("Dati caricati correttamente.")
-            except FileNotFoundError:
-                print("File non trovato.")
+            except FileNotFoundError as e:
+                print(e)
 
         elif scelta == "3":
             codice_stand = input("Codice stand: ")
