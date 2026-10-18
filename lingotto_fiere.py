@@ -130,9 +130,9 @@ class LingottoFiere:
                     break
 
             if stand_assegnato is  not None:
-                print(f"{espositore} - che è assegnato allo stand {stand_assegnato.codice}")
+                print(f"{repr(espositore)} - che è assegnato allo stand {stand_assegnato.codice}")
             else:
-                print(f"{espositore}")
+                print(f"{repr(espositore)}")
 
 
 
