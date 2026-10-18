@@ -44,9 +44,7 @@ class StandStandard:
     def calcolati_prezzo_finale(self):
         self.__prezzo_finale = self.__prezzo_base
 
-
     def __repr__(self):
-        return (f"{type(self).__name__}: codice={self.__codice} - metri_quadri={self.__metri_quadri} - "
-                f"padiglione={self.__padiglione} - prezzo_base={self.__prezzo_base} - "
-                f"espositore associato= ({self.__espositore_associato}) - disponibile={self.__disponibile} - "
-                f"prezzo finale ={self.__prezzo_finale}")
+        return (f"{type(self).__name__}: codice={self.__codice} - mq={self.__metri_quadri} - "
+                f"padiglione={self.__padiglione} - espositore associato= ({self.__espositore_associato})"
+                f" - disponibile={self.__disponibile} - prezzo ={self.__prezzo_finale}€")

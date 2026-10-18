@@ -1,4 +1,4 @@
-from standStandard import StandStandard
+from stand_standard import StandStandard
 
 class StandPremium(StandStandard):
     def __init__(self, codice, metri_quadri, padiglione, prezzo_base, posizione):

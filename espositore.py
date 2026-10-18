@@ -4,7 +4,6 @@ class Espositore:
         self.__nome = nome
         self.__cognome = cognome
 
-
     @property
     def codice(self):
         return self.__codice
