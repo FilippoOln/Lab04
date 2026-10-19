@@ -61,16 +61,9 @@ class LingottoFiere:
                     self.__lista_stand.append(stand)
             infile.close()
 
-            print("\nLista degli stand:")
-            for stand in self.__lista_stand:
-                print(repr(stand))
-            print("---------------")
-            print("Lista degli espositori:")
-            for espositore in self.__lista_espositori:
-                print(repr(espositore))
-
         except FileNotFoundError:
             raise FileNotFoundError(f"il file {file_path} non è stato trovato!!!")
+
 
     def assegna_stand_a_espositore(self, codice_stand, codice_espositore):
         """Associa uno stand a un espositore"""
@@ -108,16 +101,6 @@ class LingottoFiere:
         if stand_cercato is None:
             raise Exception(f"Non esiste nessuno stand con codice {codice_stand}")
 
-        print("\nLista degli stand:")
-        for stand in self.__lista_stand:
-            print(repr(stand))
-
-        print("---------------")
-
-        print("Lista degli espositori:")
-        for espositore in self.__lista_espositori:
-            print(repr(espositore))
-
 
     def elenca_espositori(self):
         """Stampa l'elenco degli espositori mostrando, per ognuno, lo stand a cui è associato, quando applicabile """
@@ -135,11 +118,9 @@ class LingottoFiere:
                 print(f"{repr(espositore)}")
 
 
-
-
     def stand_ordinati_per_prezzo(self):
         """Restituisce la lista ordinata degli stand in base al prezzo"""
-        return sorted(self.__lista_stand, key=attrgetter("prezzo_finale"))
+        return sorted(self.__lista_stand)
 
 
 
