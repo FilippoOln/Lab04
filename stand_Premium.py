@@ -9,6 +9,5 @@ class StandPremium(StandStandard):
     def calcolati_prezzo_finale(self):
         self.prezzo_finale = round((1.30 * super().prezzo_base), 2)
 
-
-    def __repr__(self):
-        return f"{super().__repr__()} - posizione={self.__posizione}"
+    def __str__(self):
+        return f"{super().__str__()} - PREMIUM - posizione: {self.__posizione}"

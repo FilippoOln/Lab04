@@ -47,7 +47,8 @@ class StandStandard:
     def __lt__(self, other):
         return self.__prezzo_finale < other.prezzo_finale
 
-    def __repr__(self):
-        return (f"{type(self).__name__}: codice={self.__codice} - mq={self.__metri_quadri} - "
-                f"padiglione={self.__padiglione} - prezzo={self.__prezzo_finale}€ - "
-                f"espositore associato=({self.__espositore_associato}) - disponibile={self.__disponibile}")
+
+    def __str__(self):
+        return (f"{self.__codice}: {self.__metri_quadri} mq - padiglione {self.__padiglione} - "
+                f"prezzo={self.__prezzo_finale}€ - disponibile={self.__disponibile} - "
+                f"espositore associato=({self.__espositore_associato})")

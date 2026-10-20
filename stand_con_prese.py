@@ -9,6 +9,5 @@ class StandConPrese(StandStandard):
     def calcolati_prezzo_finale(self):
         self.prezzo_finale = round(((1 + 0.07 * self.__num_prese_extra) * super().prezzo_base), 2)
 
-
-    def __repr__(self):
-        return f"{super().__repr__()} - num prese extra={self.__num_prese_extra}"
+    def __str__(self):
+        return f"{super().__str__()} - CON PRESE EXTRA={self.__num_prese_extra}"

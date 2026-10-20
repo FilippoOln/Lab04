@@ -14,6 +14,6 @@ class Espositore:
         else :
             return False
 
-    def __repr__(self):
-        return f"{type(self).__name__}: codice= {self.__codice} - nome={self.__nome} - cognome={self.__cognome}"
+    def __str__(self):
+        return f"{self.__codice}: '{self.__nome} {self.__cognome}'"
 
